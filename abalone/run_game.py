@@ -39,8 +39,7 @@ def _get_winner(score: Tuple[int, int]) -> Union[Player, None]:
     """
     if 8 in score:
         return Player.WHITE if score[0] == 8 else Player.BLACK
-    else:
-        return None
+    return None
 
 
 def _format_move(turn: Player, move: Tuple[Union[Space, Tuple[Space, Space]], Direction], moves: int) -> str:
@@ -102,7 +101,7 @@ def run_game(black: AbstractPlayer, white: AbstractPlayer, **kwargs) \
 
 
 if __name__ == '__main__':  # pragma: no cover
-    """Run a game from the command line with default configuration."""
+    # Run a game from the command line with default configuration.
     import importlib
     import sys
 

@@ -41,4 +41,3 @@ class AbstractPlayer(ABC):
         Returns:
             The next move of this player according to the parameters of `abalone.game.Game.move`.
         """
-        pass

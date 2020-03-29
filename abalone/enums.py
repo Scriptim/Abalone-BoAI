@@ -46,10 +46,9 @@ class Marble(Enum):
     def __str__(self) -> str:
         if self is Marble.WHITE:
             return Fore.WHITE + u'\u25CF' + Fore.RESET
-        elif self is Marble.BLACK:
+        if self is Marble.BLACK:
             return Fore.BLACK + u'\u25CF' + Fore.RESET
-        else:
-            return Style.DIM + u'\u00B7' + Style.NORMAL
+        return Style.DIM + u'\u00B7' + Style.NORMAL
 
 
 class Space(Enum):
