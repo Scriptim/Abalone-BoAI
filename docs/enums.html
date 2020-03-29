@@ -24,7 +24,7 @@
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/enums.py#L0-L297" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/enums.py#L0-L296" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python"># -*- coding: utf-8 -*-
 
@@ -74,10 +74,9 @@ class Marble(Enum):
     def __str__(self) -&gt; str:
         if self is Marble.WHITE:
             return Fore.WHITE + u&#39;\u25CF&#39; + Fore.RESET
-        elif self is Marble.BLACK:
+        if self is Marble.BLACK:
             return Fore.BLACK + u&#39;\u25CF&#39; + Fore.RESET
-        else:
-            return Style.DIM + u&#39;\u00B7&#39; + Style.NORMAL
+        return Style.DIM + u&#39;\u00B7&#39; + Style.NORMAL
 
 
 class Space(Enum):
@@ -344,7 +343,7 @@ class InitialPosition(Enum):
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/enums.py#L198-L218" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/enums.py#L197-L217" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class Direction(Enum):
     &#34;&#34;&#34;Enumeration of the six directions in which marbles can be moved.&#34;&#34;&#34;
@@ -409,7 +408,7 @@ class InitialPosition(Enum):
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/enums.py#L221-L298" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/enums.py#L220-L297" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class InitialPosition(Enum):
     &#34;&#34;&#34;A small collection of commonly used initial positions.&#34;&#34;&#34;
@@ -549,7 +548,7 @@ E · · · · · · · · ·
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/enums.py#L36-L52" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/enums.py#L36-L51" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class Marble(Enum):
     &#34;&#34;&#34;Enumeration of the states of a space.&#34;&#34;&#34;
@@ -564,10 +563,9 @@ E · · · · · · · · ·
     def __str__(self) -&gt; str:
         if self is Marble.WHITE:
             return Fore.WHITE + u&#39;\u25CF&#39; + Fore.RESET
-        elif self is Marble.BLACK:
+        if self is Marble.BLACK:
             return Fore.BLACK + u&#39;\u25CF&#39; + Fore.RESET
-        else:
-            return Style.DIM + u&#39;\u00B7&#39; + Style.NORMAL</code></pre>
+        return Style.DIM + u&#39;\u00B7&#39; + Style.NORMAL</code></pre>
 </details>
 <h3>Ancestors</h3>
 <ul class="hlist">
@@ -598,7 +596,7 @@ E · · · · · · · · ·
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/enums.py#L27-L33" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/enums.py#L27-L33" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class Player(Enum):
     &#34;&#34;&#34;Enumeration of the two players.&#34;&#34;&#34;
@@ -644,7 +642,7 @@ E · · · · · · · · ·
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/enums.py#L55-L195" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/enums.py#L54-L194" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class Space(Enum):
     &#34;&#34;&#34;Enumeration of all spaces of the board.

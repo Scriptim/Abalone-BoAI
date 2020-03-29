@@ -24,7 +24,7 @@
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/run_game.py#L0-L114" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/run_game.py#L0-L113" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">#!/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -67,8 +67,7 @@ def _get_winner(score: Tuple[int, int]) -&gt; Union[Player, None]:
     &#34;&#34;&#34;
     if 8 in score:
         return Player.WHITE if score[0] == 8 else Player.BLACK
-    else:
-        return None
+    return None
 
 
 def _format_move(turn: Player, move: Tuple[Union[Space, Tuple[Space, Space]], Direction], moves: int) -&gt; str:
@@ -130,7 +129,7 @@ def run_game(black: AbstractPlayer, white: AbstractPlayer, **kwargs) \
 
 
 if __name__ == &#39;__main__&#39;:  # pragma: no cover
-    &#34;&#34;&#34;Run a game from the command line with default configuration.&#34;&#34;&#34;
+    # Run a game from the command line with default configuration.
     import importlib
     import sys
 
@@ -170,7 +169,7 @@ every legal turn.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/ecdff53986c85f9e28e2f59fe02dcedea5f84d62/abalone/run_game.py#L59-L101" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/run_game.py#L58-L100" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def run_game(black: AbstractPlayer, white: AbstractPlayer, **kwargs) \
         -&gt; Generator[Tuple[Game, List[Tuple[Union[Space, Tuple[Space, Space]], Direction]]], None, None]:
