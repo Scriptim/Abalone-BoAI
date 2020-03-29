@@ -26,6 +26,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
     - run: pipenv run coverage run
+    - run: pipenv run coverage xml
     - uses: codecov/codecov-action@v1
       with:
         flags: unittest
