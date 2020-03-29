@@ -10,6 +10,7 @@ coverage = "*"
 
 [packages]
 colorama = "*"
+inquirer = "*"
 
 [requires]
 python_version = "3.8"
