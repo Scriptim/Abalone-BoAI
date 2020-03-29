@@ -1,1 +1,1 @@
-"""The Abalone game engine."""
+"""The Abalone module."""
