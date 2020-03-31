@@ -21,8 +21,8 @@
 from abc import ABC, abstractmethod
 from typing import List, Tuple, Union
 
-from enums import Direction, Space
-from game import Game
+from abalone.enums import Direction, Space
+from abalone.game import Game
 
 
 class AbstractPlayer(ABC):

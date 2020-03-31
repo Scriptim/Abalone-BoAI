@@ -1,4 +1,4 @@
 [run]
-command_line: -m unittest discover -b -s abalone
+command_line: -m unittest discover -b -s tests
 source: abalone
-omit: abalone/test_*, abalone/enums.py, abalone/*_player.py
+omit: abalone/enums.py, abalone/*_player.py

@@ -24,8 +24,8 @@ from typing import Generator, List, Tuple, Union
 import colorama
 from colorama import Style
 
-from enums import Direction, InitialPosition, Marble, Player, Space
-from utils import line_from_to, line_to_edge, neighbor
+from abalone.enums import Direction, InitialPosition, Marble, Player, Space
+from abalone.utils import line_from_to, line_to_edge, neighbor
 
 colorama.init(autoreset=True)
 

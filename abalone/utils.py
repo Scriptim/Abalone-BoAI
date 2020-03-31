@@ -20,7 +20,7 @@
 
 from typing import List, Tuple, Union
 
-from enums import Direction, Space
+from abalone.enums import Direction, Space
 
 
 def line_from_to(from_space: Space, to_space: Space) -> Union[Tuple[List[Space], Direction], Tuple[None, None]]:

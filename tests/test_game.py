@@ -21,8 +21,8 @@
 import unittest
 from typing import List, Tuple
 
-from enums import Direction, Marble, Player, Space
-from game import Game, IllegalMoveException
+from abalone.enums import Direction, Marble, Player, Space
+from abalone.game import Game, IllegalMoveException
 
 
 class TestGame(unittest.TestCase):

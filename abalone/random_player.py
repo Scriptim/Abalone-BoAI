@@ -20,9 +20,9 @@
 from random import choice
 from typing import List, Tuple, Union
 
-from abstract_player import AbstractPlayer
-from enums import Space, Direction
-from game import Game
+from abalone.abstract_player import AbstractPlayer
+from abalone.enums import Space, Direction
+from abalone.game import Game
 
 
 class RandomPlayer(AbstractPlayer):
