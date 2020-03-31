@@ -21,10 +21,10 @@
 import unittest
 from typing import List, Tuple, Union
 
-from abstract_player import AbstractPlayer
-from enums import Direction, Player, Space
-from game import Game
-from run_game import run_game
+from abalone.abstract_player import AbstractPlayer
+from abalone.enums import Direction, Player, Space
+from abalone.game import Game
+from abalone.run_game import run_game
 
 
 class TestRunGame(unittest.TestCase):

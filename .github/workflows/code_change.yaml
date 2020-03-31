@@ -13,7 +13,6 @@ jobs:
     - uses: actions/setup-python@v1
       with:
         python-version: '3.8'
-    - uses: actions/setup-python@v1
     - uses: dschep/install-pipenv-action@v1
     - run: pipenv install --dev
     - run: export PYTHONPATH=$PYTHONPATH:$(pwd)/abalone/; pipenv run pdoc -c show_type_annotations=True -c git_link_template="'https://github.com/Scriptim/Abalone-BoAi/blob/{commit}/{path}#L{start_line}-L{end_line}'" -f --html -o docs abalone
