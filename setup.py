@@ -17,10 +17,16 @@
 # TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import re
+
 import setuptools
 
 with open('README.md', 'r') as readme:
     long_description = readme.read()
+    github_url_prefix = '(https://github.com/Scriptim/Abalone-BoAI/tree/master/'
+    github_raw_url_prefix = '(https://raw.githubusercontent.com/Scriptim/Abalone-BoAI/master/'
+    long_description = re.sub('\\(\\./img/', github_raw_url_prefix + 'img/', long_description)
+    long_description = re.sub('\\(\\./', github_url_prefix, long_description)
 
 setuptools.setup(
     name='abalone-boai',
