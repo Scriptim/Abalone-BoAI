@@ -2,3 +2,6 @@ __pycache__/
 .env
 .coverage
 htmlcov
+abalone_boai.egg-info/
+build/
+dist/
