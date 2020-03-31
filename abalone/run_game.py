@@ -94,7 +94,7 @@ def run_game(black: AbstractPlayer, white: AbstractPlayer, **kwargs) \
         except IllegalMoveException as ex:
             print(f'{game.turn.name}\'s tried to perform an illegal move ({ex})\n')
             break
-        except:  # lgtm [py/catch-base-exception]
+        except:
             print(f'{game.turn.name}\'s move caused an exception\n')
             print(format_exc())
             break
