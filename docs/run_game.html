@@ -24,7 +24,7 @@
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/run_game.py#L0-L113" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/c8978e85328444f8d3dcd7ccb6620a6786b948d4/abalone/run_game.py#L0-L113" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">#!/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -122,7 +122,7 @@ def run_game(black: AbstractPlayer, white: AbstractPlayer, **kwargs) \
         except IllegalMoveException as ex:
             print(f&#39;{game.turn.name}\&#39;s tried to perform an illegal move ({ex})\n&#39;)
             break
-        except:  # lgtm [py/catch-base-exception]
+        except:
             print(f&#39;{game.turn.name}\&#39;s move caused an exception\n&#39;)
             print(format_exc())
             break
@@ -169,7 +169,7 @@ every legal turn.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/run_game.py#L58-L100" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/c8978e85328444f8d3dcd7ccb6620a6786b948d4/abalone/run_game.py#L58-L100" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def run_game(black: AbstractPlayer, white: AbstractPlayer, **kwargs) \
         -&gt; Generator[Tuple[Game, List[Tuple[Union[Space, Tuple[Space, Space]], Direction]]], None, None]:
@@ -210,7 +210,7 @@ every legal turn.</p></section>
         except IllegalMoveException as ex:
             print(f&#39;{game.turn.name}\&#39;s tried to perform an illegal move ({ex})\n&#39;)
             break
-        except:  # lgtm [py/catch-base-exception]
+        except:
             print(f&#39;{game.turn.name}\&#39;s move caused an exception\n&#39;)
             print(format_exc())
             break</code></pre>
