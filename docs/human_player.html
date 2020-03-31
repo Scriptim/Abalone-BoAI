@@ -24,7 +24,7 @@
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/human_player.py#L0-L114" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/human_player.py#L0-L114" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python"># -*- coding: utf-8 -*-
 
@@ -50,9 +50,9 @@ from typing import List, Tuple, Union
 
 import inquirer
 
-from abstract_player import AbstractPlayer
-from enums import Direction, Space
-from game import Game
+from abalone.abstract_player import AbstractPlayer
+from abalone.enums import Direction, Space
+from abalone.game import Game
 
 
 def _prompt_move_type() -&gt; str:
@@ -161,7 +161,7 @@ inheritance.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/human_player.py#L102-L115" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/human_player.py#L102-L115" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class HumanPlayer(AbstractPlayer):
 
@@ -180,47 +180,17 @@ inheritance.</p></section>
 </details>
 <h3>Ancestors</h3>
 <ul class="hlist">
-<li>abstract_player.AbstractPlayer</li>
+<li><a title="abalone.abstract_player.AbstractPlayer" href="abstract_player.html#abalone.abstract_player.AbstractPlayer">AbstractPlayer</a></li>
 <li>abc.ABC</li>
 </ul>
-<h3>Methods</h3>
-<dl>
-<dt id="abalone.human_player.HumanPlayer.turn"><code class="name flex">
-<span>def <span class="ident">turn</span></span>(<span>self, game: game.Game, moves_history: List[Tuple[Union[enums.Space, Tuple[enums.Space, enums.Space]], enums.Direction]]) -> Tuple[Union[enums.Space, Tuple[enums.Space, enums.Space]], enums.Direction]</span>
-</code></dt>
-<dd>
-<section class="desc"><p>This method is called from the outside to prompt this player to make a move.</p>
-<h2 id="args">Args</h2>
-<dl>
-<dt><strong><code>game</code></strong></dt>
-<dd>The current state of the <a title="abalone.game.Game" href="game.html#abalone.game.Game"><code>Game</code></a></dd>
-<dt><strong><code>moves_history</code></strong></dt>
-<dd>A chronologically sorted list of all past moves, starting with the earliest. It also
-contains the opponent's moves. The elements correspond to the return values of the
-<a title="abalone.abstract_player.AbstractPlayer.turn" href="abstract_player.html#abalone.abstract_player.AbstractPlayer.turn"><code>AbstractPlayer.turn()</code></a> method.</dd>
-</dl>
-<h2 id="returns">Returns</h2>
-<p>The next move of this player according to the parameters of <a title="abalone.game.Game.move" href="game.html#abalone.game.Game.move"><code>Game.move()</code></a>.</p></section>
-<details class="source">
-<summary>
-<span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/human_player.py#L104-L115" class="git-link">Browse git</a>
-</summary>
-<pre><code class="python">def turn(self, game: Game, moves_history: List[Tuple[Union[Space, Tuple[Space, Space]], Direction]]) \
-        -&gt; Tuple[Union[Space, Tuple[Space, Space]], Direction]:
-    legal_moves = list(game.generate_legal_moves())
-    move_type = _prompt_move_type()
-    marble1 = _prompt_marble1(move_type, legal_moves)
-
-    if move_type == &#39;In-line&#39;:
-        marbles = marble1
-    else:
-        marbles = (marble1, _prompt_marble2(marble1, legal_moves))
-
-    return marbles, _prompt_direction(marbles, legal_moves)</code></pre>
-</details>
-</dd>
-</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="abalone.abstract_player.AbstractPlayer" href="abstract_player.html#abalone.abstract_player.AbstractPlayer">AbstractPlayer</a></b></code>:
+<ul class="hlist">
+<li><code><a title="abalone.abstract_player.AbstractPlayer.turn" href="abstract_player.html#abalone.abstract_player.AbstractPlayer.turn">turn</a></code></li>
+</ul>
+</li>
+</ul>
 </dd>
 </dl>
 </section>
@@ -240,9 +210,6 @@ contains the opponent's moves. The elements correspond to the return values of t
 <ul>
 <li>
 <h4><code><a title="abalone.human_player.HumanPlayer" href="#abalone.human_player.HumanPlayer">HumanPlayer</a></code></h4>
-<ul class="">
-<li><code><a title="abalone.human_player.HumanPlayer.turn" href="#abalone.human_player.HumanPlayer.turn">turn</a></code></li>
-</ul>
 </li>
 </ul>
 </li>

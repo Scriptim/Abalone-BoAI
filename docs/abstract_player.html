@@ -24,7 +24,7 @@
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/abstract_player.py#L0-L42" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/abstract_player.py#L0-L42" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python"># -*- coding: utf-8 -*-
 
@@ -49,8 +49,8 @@
 from abc import ABC, abstractmethod
 from typing import List, Tuple, Union
 
-from enums import Direction, Space
-from game import Game
+from abalone.enums import Direction, Space
+from abalone.game import Game
 
 
 class AbstractPlayer(ABC):
@@ -89,7 +89,7 @@ inheritance.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/abstract_player.py#L28-L43" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/abstract_player.py#L28-L43" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class AbstractPlayer(ABC):
 
@@ -112,10 +112,15 @@ inheritance.</p></section>
 <ul class="hlist">
 <li>abc.ABC</li>
 </ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="abalone.human_player.HumanPlayer" href="human_player.html#abalone.human_player.HumanPlayer">HumanPlayer</a></li>
+<li><a title="abalone.random_player.RandomPlayer" href="random_player.html#abalone.random_player.RandomPlayer">RandomPlayer</a></li>
+</ul>
 <h3>Methods</h3>
 <dl>
 <dt id="abalone.abstract_player.AbstractPlayer.turn"><code class="name flex">
-<span>def <span class="ident">turn</span></span>(<span>self, game: game.Game, moves_history: List[Tuple[Union[enums.Space, Tuple[enums.Space, enums.Space]], enums.Direction]]) -> Tuple[Union[enums.Space, Tuple[enums.Space, enums.Space]], enums.Direction]</span>
+<span>def <span class="ident">turn</span></span>(<span>self, game: <a title="abalone.game.Game" href="game.html#abalone.game.Game">Game</a>, moves_history: List[Tuple[Union[abalone.enums.Space, Tuple[abalone.enums.Space, abalone.enums.Space]], abalone.enums.Direction]]) -> Tuple[Union[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, Tuple[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>]], <a title="abalone.enums.Direction" href="enums.html#abalone.enums.Direction">Direction</a>]</span>
 </code></dt>
 <dd>
 <section class="desc"><p>This method is called from the outside to prompt this player to make a move.</p>
@@ -133,7 +138,7 @@ contains the opponent's moves. The elements correspond to the return values of t
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/abstract_player.py#L30-L43" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/abstract_player.py#L30-L43" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">@abstractmethod
 def turn(self, game: Game, moves_history: List[Tuple[Union[Space, Tuple[Space, Space]], Direction]]) \

@@ -24,7 +24,7 @@
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/run_game.py#L0-L113" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/run_game.py#L0-L113" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">#!/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -50,10 +50,10 @@
 from traceback import format_exc
 from typing import Generator, List, Tuple, Union
 
-from abstract_player import AbstractPlayer
-from enums import Direction, Player, Space
-from game import Game, IllegalMoveException
-from utils import line_from_to
+from abalone.abstract_player import AbstractPlayer
+from abalone.enums import Direction, Player, Space
+from abalone.game import Game, IllegalMoveException
+from abalone.utils import line_from_to
 
 
 def _get_winner(score: Tuple[int, int]) -&gt; Union[Player, None]:
@@ -150,7 +150,7 @@ if __name__ == &#39;__main__&#39;:  # pragma: no cover
 <h2 class="section-title" id="header-functions">Functions</h2>
 <dl>
 <dt id="abalone.run_game.run_game"><code class="name flex">
-<span>def <span class="ident">run_game</span></span>(<span>black: abstract_player.AbstractPlayer, white: abstract_player.AbstractPlayer, **kwargs) -> Generator[Tuple[game.Game, List[Tuple[Union[enums.Space, Tuple[enums.Space, enums.Space]], enums.Direction]]], NoneType, NoneType]</span>
+<span>def <span class="ident">run_game</span></span>(<span>black: <a title="abalone.abstract_player.AbstractPlayer" href="abstract_player.html#abalone.abstract_player.AbstractPlayer">AbstractPlayer</a>, white: <a title="abalone.abstract_player.AbstractPlayer" href="abstract_player.html#abalone.abstract_player.AbstractPlayer">AbstractPlayer</a>, **kwargs) -> Generator[Tuple[<a title="abalone.game.Game" href="game.html#abalone.game.Game">Game</a>, List[Tuple[Union[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, Tuple[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>]], <a title="abalone.enums.Direction" href="enums.html#abalone.enums.Direction">Direction</a>]]], NoneType, NoneType]</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Runs a game instance and prints the progress / current state at every turn.</p>
@@ -169,7 +169,7 @@ every legal turn.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/run_game.py#L58-L100" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/run_game.py#L58-L100" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def run_game(black: AbstractPlayer, white: AbstractPlayer, **kwargs) \
         -&gt; Generator[Tuple[Game, List[Tuple[Union[Space, Tuple[Space, Space]], Direction]]], None, None]:

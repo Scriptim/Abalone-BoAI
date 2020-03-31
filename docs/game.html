@@ -24,7 +24,7 @@
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L0-L317" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L0-L317" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python"># -*- coding: utf-8 -*-
 
@@ -52,8 +52,8 @@ from typing import Generator, List, Tuple, Union
 import colorama
 from colorama import Style
 
-from enums import Direction, InitialPosition, Marble, Player, Space
-from utils import line_from_to, line_to_edge, neighbor
+from abalone.enums import Direction, InitialPosition, Marble, Player, Space
+from abalone.utils import line_from_to, line_to_edge, neighbor
 
 colorama.init(autoreset=True)
 
@@ -357,14 +357,14 @@ class IllegalMoveException(Exception):
 <dl>
 <dt id="abalone.game.Game"><code class="flex name class">
 <span>class <span class="ident">Game</span></span>
-<span>(</span><span>initial_position: enums.InitialPosition = InitialPosition.DEFAULT, first_turn: enums.Player = Player.BLACK)</span>
+<span>(</span><span>initial_position: <a title="abalone.enums.InitialPosition" href="enums.html#abalone.enums.InitialPosition">InitialPosition</a> = InitialPosition.DEFAULT, first_turn: <a title="abalone.enums.Player" href="enums.html#abalone.enums.Player">Player</a> = Player.BLACK)</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Represents the mutable state of an Abalone game.</p></section>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L69-L314" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L69-L314" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class Game:
     &#34;&#34;&#34;Represents the mutable state of an Abalone game.&#34;&#34;&#34;
@@ -616,7 +616,7 @@ class IllegalMoveException(Exception):
 <h3>Methods</h3>
 <dl>
 <dt id="abalone.game.Game.generate_legal_moves"><code class="name flex">
-<span>def <span class="ident">generate_legal_moves</span></span>(<span>self) -> Generator[Tuple[Union[enums.Space, Tuple[enums.Space, enums.Space]], enums.Direction], NoneType, NoneType]</span>
+<span>def <span class="ident">generate_legal_moves</span></span>(<span>self) -> Generator[Tuple[Union[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, Tuple[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>]], <a title="abalone.enums.Direction" href="enums.html#abalone.enums.Direction">Direction</a>], NoneType, NoneType]</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Generates all possible moves that the player whose turn it is can perform. The yielded values are intended
@@ -626,7 +626,7 @@ to be passed as arguments to <a title="abalone.game.Game.move" href="#abalone.ga
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L300-L314" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L300-L314" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def generate_legal_moves(self) -&gt; Generator[Tuple[Union[Space, Tuple[Space, Space]], Direction], None, None]:
     &#34;&#34;&#34;Generates all possible moves that the player whose turn it is can perform. The yielded values are intended\
@@ -646,7 +646,7 @@ to be passed as arguments to <a title="abalone.game.Game.move" href="#abalone.ga
 </details>
 </dd>
 <dt id="abalone.game.Game.generate_own_marble_lines"><code class="name flex">
-<span>def <span class="ident">generate_own_marble_lines</span></span>(<span>self) -> Generator[Union[enums.Space, Tuple[enums.Space, enums.Space]], NoneType, NoneType]</span>
+<span>def <span class="ident">generate_own_marble_lines</span></span>(<span>self) -> Generator[Union[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, Tuple[<a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>]], NoneType, NoneType]</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Generates all adjacent straight lines with up to three marbles of the player whose turn it is.</p>
@@ -655,7 +655,7 @@ to be passed as arguments to <a title="abalone.game.Game.move" href="#abalone.ga
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L282-L298" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L282-L298" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def generate_own_marble_lines(self) -&gt; Generator[Union[Space, Tuple[Space, Space]], None, None]:
     &#34;&#34;&#34;Generates all adjacent straight lines with up to three marbles of the player whose turn it is.
@@ -677,7 +677,7 @@ to be passed as arguments to <a title="abalone.game.Game.move" href="#abalone.ga
 </details>
 </dd>
 <dt id="abalone.game.Game.get_marble"><code class="name flex">
-<span>def <span class="ident">get_marble</span></span>(<span>self, space: enums.Space) -> enums.Marble</span>
+<span>def <span class="ident">get_marble</span></span>(<span>self, space: <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>) -> <a title="abalone.enums.Marble" href="enums.html#abalone.enums.Marble">Marble</a></span>
 </code></dt>
 <dd>
 <section class="desc"><p>Returns the state of a <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space"><code>Space</code></a>.</p>
@@ -696,7 +696,7 @@ to be passed as arguments to <a title="abalone.game.Game.move" href="#abalone.ga
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L123-L141" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L123-L141" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def get_marble(self, space: Space) -&gt; Marble:
     &#34;&#34;&#34;Returns the state of a `abalone.enums.Space`.
@@ -729,7 +729,7 @@ to be passed as arguments to <a title="abalone.game.Game.move" href="#abalone.ga
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L143-L157" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L143-L157" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def get_score(self) -&gt; Tuple[int, int]:
     &#34;&#34;&#34;Counts how many marbles the players still have on the board.
@@ -749,7 +749,7 @@ to be passed as arguments to <a title="abalone.game.Game.move" href="#abalone.ga
 </details>
 </dd>
 <dt id="abalone.game.Game.move"><code class="name flex">
-<span>def <span class="ident">move</span></span>(<span>self, marbles: Union[enums.Space, Tuple[enums.Space, enums.Space]], direction: enums.Direction) -> NoneType</span>
+<span>def <span class="ident">move</span></span>(<span>self, marbles: Union[abalone.enums.Space, Tuple[abalone.enums.Space, abalone.enums.Space]], direction: <a title="abalone.enums.Direction" href="enums.html#abalone.enums.Direction">Direction</a>) -> NoneType</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Performs either an inline or a broadside move, depending on the arguments passed, by calling the according
@@ -771,7 +771,7 @@ or a tuple of two spaces for a broadside move, in accordance with the parameters
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L260-L280" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L260-L280" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def move(self, marbles: Union[Space, Tuple[Space, Space]], direction: Direction) -&gt; None:
     &#34;&#34;&#34;Performs either an inline or a broadside move, depending on the arguments passed, by calling the according\
@@ -797,7 +797,7 @@ or a tuple of two spaces for a broadside move, in accordance with the parameters
 </details>
 </dd>
 <dt id="abalone.game.Game.move_broadside"><code class="name flex">
-<span>def <span class="ident">move_broadside</span></span>(<span>self, boundaries: Tuple[enums.Space, enums.Space], direction: enums.Direction) -> NoneType</span>
+<span>def <span class="ident">move_broadside</span></span>(<span>self, boundaries: Tuple[abalone.enums.Space, abalone.enums.Space], direction: <a title="abalone.enums.Direction" href="enums.html#abalone.enums.Direction">Direction</a>) -> NoneType</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Performs a broadside move. With a broadside move a line of adjacent marbles is moved sideways into empty
@@ -828,7 +828,7 @@ there is exactly one marble in between.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L224-L258" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L224-L258" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def move_broadside(self, boundaries: Tuple[Space, Space], direction: Direction) -&gt; None:
     &#34;&#34;&#34;Performs a broadside move. With a broadside move a line of adjacent marbles is moved sideways into empty\
@@ -868,7 +868,7 @@ there is exactly one marble in between.</p>
 </details>
 </dd>
 <dt id="abalone.game.Game.move_inline"><code class="name flex">
-<span>def <span class="ident">move_inline</span></span>(<span>self, caboose: enums.Space, direction: enums.Direction) -> NoneType</span>
+<span>def <span class="ident">move_inline</span></span>(<span>self, caboose: <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, direction: <a title="abalone.enums.Direction" href="enums.html#abalone.enums.Direction">Direction</a>) -> NoneType</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Performs an inline move. An inline move is denoted by the trailing marble ("caboose") of a straight line of
@@ -898,7 +898,7 @@ if the opponent's marbles are outnumbered ("sumito") and are moved to an empty s
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L181-L222" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L181-L222" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def move_inline(self, caboose: Space, direction: Direction) -&gt; None:
     &#34;&#34;&#34;Performs an inline move. An inline move is denoted by the trailing marble (&#34;caboose&#34;) of a straight line of\
@@ -945,7 +945,7 @@ if the opponent's marbles are outnumbered ("sumito") and are moved to an empty s
 </details>
 </dd>
 <dt id="abalone.game.Game.not_in_turn_player"><code class="name flex">
-<span>def <span class="ident">not_in_turn_player</span></span>(<span>self) -> enums.Player</span>
+<span>def <span class="ident">not_in_turn_player</span></span>(<span>self) -> <a title="abalone.enums.Player" href="enums.html#abalone.enums.Player">Player</a></span>
 </code></dt>
 <dd>
 <section class="desc"><p>Gets the <a title="abalone.enums.Player" href="enums.html#abalone.enums.Player"><code>Player</code></a> who is currently <em>not</em> in turn. Returns <a title="abalone.enums.Player.WHITE" href="enums.html#abalone.enums.Player.WHITE"><code>Player.WHITE</code></a> when
@@ -956,7 +956,7 @@ other places.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L91-L100" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L91-L100" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def not_in_turn_player(self) -&gt; Player:
     &#34;&#34;&#34;Gets the `abalone.enums.Player` who is currently *not* in turn. Returns `abalone.enums.Player.WHITE` when\
@@ -971,7 +971,7 @@ other places.</p>
 </details>
 </dd>
 <dt id="abalone.game.Game.set_marble"><code class="name flex">
-<span>def <span class="ident">set_marble</span></span>(<span>self, space: enums.Space, marble: enums.Marble) -> NoneType</span>
+<span>def <span class="ident">set_marble</span></span>(<span>self, space: <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space">Space</a>, marble: <a title="abalone.enums.Marble" href="enums.html#abalone.enums.Marble">Marble</a>) -> NoneType</span>
 </code></dt>
 <dd>
 <section class="desc"><p>Updates the state of a <a title="abalone.enums.Space" href="enums.html#abalone.enums.Space"><code>Space</code></a> on the board.</p>
@@ -990,7 +990,7 @@ other places.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L106-L121" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L106-L121" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def set_marble(self, space: Space, marble: Marble) -&gt; None:
     &#34;&#34;&#34;Updates the state of a `abalone.enums.Space` on the board.
@@ -1018,7 +1018,7 @@ other places.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L102-L104" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L102-L104" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">def switch_player(self) -&gt; None:
     &#34;&#34;&#34;Switches the player whose turn it is.&#34;&#34;&#34;
@@ -1036,7 +1036,7 @@ other places.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
-<a href="https://github.com/Scriptim/Abalone-BoAi/blob/f37b9865fc70658a294291268f050b3b915e5c9c/abalone/game.py#L317-L318" class="git-link">Browse git</a>
+<a href="https://github.com/Scriptim/Abalone-BoAi/blob/1623e8ef05411682f95dba45e6566e1275dbc901/abalone/game.py#L317-L318" class="git-link">Browse git</a>
 </summary>
 <pre><code class="python">class IllegalMoveException(Exception):
     &#34;&#34;&#34;Exception that is raised if a player tries to perform an illegal move.&#34;&#34;&#34;</code></pre>
