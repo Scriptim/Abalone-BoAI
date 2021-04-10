@@ -61,15 +61,15 @@ class MyPlayer(AbstractPlayer):
 
 Have a look at [`random_player.py`](./abalone/random_player.py) for a sample implementation.
 
-Refer to the [documentation][docs_turn] for details about the parameters and the return type.
+Refer to the [`abstract_player.AbstractPlayer.turn`][./abalone/abstract_player.py] for details about the parameters and the return type.
 
-A particularly useful method is [`game.generate_legal_moves()`][docs_generate_legal_moves]. It yields all legal moves that the AI can perform. The `turn` method can simply return one of the yielded values.
+A particularly useful method is [`game.generate_legal_moves()`][./abalone/game.py]. It yields all legal moves that the AI can perform. The `turn` method can simply return one of the yielded values.
 
 ### A "move"
 
 The return value of the `turn` method is called a *move*. This is a tuple, which consists firstly of the marbles to be moved and secondly of the direction of movement.  
-The marbles are specified by the space where they are located on the board (see the image at the beginning of this document for the notation of the spaces). All spaces are listed in the [`Space`][docs_space] enum. For an inline move only the trailing marble ("caboose") of the line to be moved is specified. For a broadside move only the two outermost marbles are given in a tuple.  
-The second element of the tuple is the direction of movement. These are all listed in the [`Direction`][docs_direction] enum.
+The marbles are specified by the space where they are located on the board (see the image at the beginning of this document for the notation of the spaces). All spaces are listed in the [`Space`][./abalone/enums.py] enum. For an inline move only the trailing marble ("caboose") of the line to be moved is specified. For a broadside move only the two outermost marbles are given in a tuple.  
+The second element of the tuple is the direction of movement. These are all listed in the [`Direction`][./abalone/enums.py] enum.
 Therefore the two example moves from the images above (see *Abalone Rules*) would look like this:
 ```python
 from enums import Direction, Space
@@ -103,8 +103,4 @@ All contributions are welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for de
     [wikimedia_abalone_standard]: https://upload.wikimedia.org/wikipedia/commons/5/57/Abalone_standard.svg "Abalone standard.svg"
     [wikimedia_abalone_broadside]: https://upload.wikimedia.org/wikipedia/commons/4/48/Abalone_broadside.svg "Abalone broadside.svg"
     [wikimedia_abalone_inline]: https://upload.wikimedia.org/wikipedia/commons/2/28/Abalone_inline.svg "Abalone inline.svg"
-    [docs_turn]: https://scriptim.github.io/Abalone-BoAI/abstract_player.html#abalone.abstract_player.AbstractPlayer.turn "Docs: abalone.abstract_player.AbstractPlayer.turn"
-    [docs_generate_legal_moves]: https://scriptim.github.io/Abalone-BoAI/game.html#abalone.game.Game.generate_legal_moves "Docs: abalone.game.Game.generate_legal_moves"
-    [docs_space]: https://scriptim.github.io/Abalone-BoAI/game.html#enums.html#abalone.enums.Space "Docs: abalone.enums.Space"
-    [docs_direction]: https://scriptim.github.io/Abalone-BoAI/game.html#enums.html#abalone.enums.Direction "Docs: abalone.enums.Direction"
     [rulebook]: https://cdn.1j1ju.com/medias/c2/b0/3a-abalone-rulebook.pdf "Abalone Rulebook (PDF)"
