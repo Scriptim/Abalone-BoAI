@@ -61,15 +61,15 @@ class MyPlayer(AbstractPlayer):
 
 Have a look at [`random_player.py`](./abalone/random_player.py) for a sample implementation.
 
-Refer to the [`abstract_player.AbstractPlayer.turn`][./abalone/abstract_player.py] for details about the parameters and the return type.
+Refer to the [`abstract_player.AbstractPlayer.turn`](./abalone/abstract_player.py) for details about the parameters and the return type.
 
-A particularly useful method is [`game.generate_legal_moves()`][./abalone/game.py]. It yields all legal moves that the AI can perform. The `turn` method can simply return one of the yielded values.
+A particularly useful method is [`game.generate_legal_moves()`](./abalone/game.py). It yields all legal moves that the AI can perform. The `turn` method can simply return one of the yielded values.
 
 ### A "move"
 
 The return value of the `turn` method is called a *move*. This is a tuple, which consists firstly of the marbles to be moved and secondly of the direction of movement.  
-The marbles are specified by the space where they are located on the board (see the image at the beginning of this document for the notation of the spaces). All spaces are listed in the [`Space`][./abalone/enums.py] enum. For an inline move only the trailing marble ("caboose") of the line to be moved is specified. For a broadside move only the two outermost marbles are given in a tuple.  
-The second element of the tuple is the direction of movement. These are all listed in the [`Direction`][./abalone/enums.py] enum.
+The marbles are specified by the space where they are located on the board (see the image at the beginning of this document for the notation of the spaces). All spaces are listed in the [`Space`](./abalone/enums.py) enum. For an inline move only the trailing marble ("caboose") of the line to be moved is specified. For a broadside move only the two outermost marbles are given in a tuple.  
+The second element of the tuple is the direction of movement. These are all listed in the [`Direction`](./abalone/enums.py) enum.
 Therefore the two example moves from the images above (see *Abalone Rules*) would look like this:
 ```python
 from enums import Direction, Space
