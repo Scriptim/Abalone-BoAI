@@ -45,6 +45,3 @@ This project uses the [`unittest`](https://docs.python.org/3/library/unittest.ht
     
 Use `$ coverage report` for a report on testing coverage.
 
-## Documentation
-
-API documentation is available at <https://scriptim.github.io/Abalone-BoAI>.
